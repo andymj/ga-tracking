@@ -16,11 +16,11 @@ var gaTracker = (function(dLayer) {
 
     var isUniversalAnalytics = function(ga) {
         return typeof ga !== "undefined" && typeof ga.getAll === 'function' ? true : false;
-    }
+    };
 
     var isClassicAnalytics = function(_gat) {
         return typeof _gat !== "undefined" && typeof _gat._getTrackers === 'function' ? true : false;
-    }
+    };
 
     // decorate target URL for cross domain tracker.
     var decorateLink = function(url) {
@@ -32,9 +32,7 @@ var gaTracker = (function(dLayer) {
                 linker = new window.gaplugins.Linker(trackers[0]);
                 url = linker.decorate(url);
             }
-        }
-
-        if (isClassicAnalytics(_gat)) {
+        } else if (isClassicAnalytics(_gat)) {
             trackers = _gat._getTrackers();
             if (trackers.length) {
                 url = trackers[0]._getLinkerUrl(url);
