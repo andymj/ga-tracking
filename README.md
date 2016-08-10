@@ -13,7 +13,7 @@ Check the [official guide](https://developers.google.com/tag-manager/quickstart 
 # Track Custom Events
 * Add the ga-tracking.js file to the footer.
 * On your callback function, see the example below to push a custom event.
-* ```gaTracker.event(event_name, event_category, event_type, event_label, event_value)```.
+* ```gaTracker.pushEvent(event_name, event_category, event_type, event_label, event_value)```.
 * Where ```event_name, event_category, event_type, event_label``` the Type of the values should be String, and ```event_value``` must be a Number.
 
 # Cross Domain Tracking
