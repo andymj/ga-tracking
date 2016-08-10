@@ -6,20 +6,20 @@ var gaTracker = (function(dLayer) {
     // value Type Number (int)
     var pushEventToDataLayer = function(eventName, category, action, label, value) {
         dLayer.push({
-            "event": eventName, // on GTM this would be the event that triggers the tag.
-            "category": category,
-            "action": action,
-            "label": label,
-            "value": value
+            'event': eventName, // on GTM this would be the event that triggers the tag.
+            'category': category,
+            'action': action,
+            'label': label,
+            'value': value
         });
     };
 
     var isUniversalAnalytics = function(ga) {
-        return typeof ga !== "undefined" && typeof ga.getAll === 'function' ? true : false;
+        return typeof ga !== 'undefined' && typeof ga.getAll === 'function' ? true : false;
     };
 
     var isClassicAnalytics = function(_gat) {
-        return typeof _gat !== "undefined" && typeof _gat._getTrackers === 'function' ? true : false;
+        return typeof _gat !== 'undefined' && typeof _gat._getTrackers === 'function' ? true : false;
     };
 
     // decorate target URL for cross domain tracker.
@@ -43,8 +43,8 @@ var gaTracker = (function(dLayer) {
     };
 
     return {
-        "event": pushEventToDataLayer,
-        "decorateLink": decorateLink
+        event: pushEventToDataLayer,
+        decorateLink: decorateLink
     };
 
 })(dataLayer);
