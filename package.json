@@ -1,0 +1,23 @@
+{
+  "name": "ga-tracking",
+  "version": "1.0.0",
+  "description": "Google Tag Manager event tracking and link decorator.",
+  "main": "ga-tracking.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andymj/ga-tracking.git"
+  },
+  "keywords": [
+    "google",
+    "analytics"
+  ],
+  "author": "Andy Mejia",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andymj/ga-tracking/issues"
+  },
+  "homepage": "https://github.com/andymj/ga-tracking#readme"
+}
